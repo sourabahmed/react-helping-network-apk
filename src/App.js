@@ -28,7 +28,7 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
-            <PrivateRoute path='/register'>
+            <PrivateRoute path='/register/:registerId'>
               <Register></Register>
             </PrivateRoute>
           </Switch>
