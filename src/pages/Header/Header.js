@@ -1,12 +1,38 @@
 import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../hook/useAuth'
 
 const Header = () => {
+    const {user, logOut} = useAuth();
+    const signOut = () => {
+        logOut();
+    }
     return (
-        <div>
-            <Link to='/'>Home</Link>
-            <Link to='/events'>Event</Link>
-        </div>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link ><Link to='/'>Home</Link></Nav.Link>
+                        <Nav.Link ><Link to='/events'>Event</Link></Nav.Link>
+                        <Nav.Link ><Link to='/register'>Register</Link></Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="#deets">{user?.displayName}</Nav.Link>
+                        {
+                            user?.email? <button onClick={signOut} className=" btn btn-danger">Logout</button>:
+                            <Nav.Link ><button className="btn btn-danger"><Link to='/login'>Login</Link></button></Nav.Link>
+                        }
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+        // <div>
+        //     <Link to='/'>Home</Link>
+        //     <Link to='/events'>Event</Link>
+        // </div>
     );
 };
 
