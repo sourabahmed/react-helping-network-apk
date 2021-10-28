@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import useAuth from '../hook/useAuth';
+import './Register.css'
 
 const Register = () => {
     const [event, setEvent] = useState();
@@ -30,9 +31,9 @@ const Register = () => {
    
     return (
         <div>
-            <h1>This is register id {registerId}</h1>
+            <h1>Please Register</h1>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
                 <input  defaultValue={user.displayName} {...register("fullName")} /> <br />
                 <input defaultValue={user.email} {...register("email")} /> <br />
                 <textarea defaultValue={event?.description} {...register("eventDescription")} /> <br />

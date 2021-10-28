@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './Events.css'
 
 const Events = () => {
     const { register, handleSubmit } = useForm();
@@ -15,10 +16,10 @@ const Events = () => {
         .then(data => console.log(data))
     }
     return (
-        <div>
-            <h2>This is events</h2>
+        <div className="events">
+            <h2>Add an Event</h2>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className='form' onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("eventTitle")} placeholder='Event Title'/> <br />
                 <textarea {...register("description")} placeholder='Event description'/> <br />
                 <input {...register("imgUrl")} placeholder='Image Url'/> <br />

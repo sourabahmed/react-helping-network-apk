@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import useFirebase from '../hook/useFirebase';
 import useAuth from '../hook/useAuth'
 
 const Login = () => {
@@ -11,7 +9,7 @@ const Login = () => {
     }
     return (
         <div>
-            <button onClick={googleSignIn}>Sign in with google</button>
+            <button className="btn btn-danger m-5" onClick={googleSignIn}>Sign in with google</button>
         </div>
     );
 };

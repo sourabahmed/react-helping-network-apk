@@ -7,10 +7,10 @@ const AllEvent = (props) => {
     // const url = `/register/${_id}};
     return (
         <div>
-            <Link to={`/register/${_id}`}>
+            <Link className="text-decoration-none" to={`/register/${_id}`}>
                 <div>
                     <img className="img-fluid" src={imgUrl} alt="" />
-                    <h3 className="text-decoration-none">{eventTitle}</h3>
+                    <h3 >{eventTitle}</h3>
                 </div>
             </Link>
        </div>

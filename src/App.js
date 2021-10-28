@@ -5,6 +5,7 @@ import Header from './pages/Header/Header';
 import Events from './pages/Events/Events';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
+import RegisterData from './pages/RegisterData/RegisterData'
 import Register from './pages/Register/Register'
 import AuthProvider from './pages/context/AuthProvider';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path='/registerData'>
+              <RegisterData></RegisterData>
             </Route>
             <PrivateRoute path='/register/:registerId'>
               <Register></Register>
