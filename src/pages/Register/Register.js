@@ -6,12 +6,11 @@ import './Register.css'
 
 const Register = () => {
     const [event, setEvent] = useState();
-    console.log(event);
     const {user} = useAuth();
     const { registerId } = useParams();
 
     useEffect(() => {
-        fetch(`https://thawing-forest-41291.herokuapp.com/${registerId}`)
+        fetch(`https://thawing-forest-41291.herokuapp.com/singleEvent/${registerId}`)
             .then(res => res.json())
             .then(data => setEvent(data))
     }, [])

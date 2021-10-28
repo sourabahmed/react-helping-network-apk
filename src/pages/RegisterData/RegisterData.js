@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const RegisterData = () => {
     const [registerData, setRegisterData] = useState([]);
-    console.log(registerData);
+
 
     useEffect(() => {
         fetch('https://thawing-forest-41291.herokuapp.com/registerData')

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const AllEvent = (props) => {
     const { imgUrl, eventTitle, _id } = props.event;
-    console.log(_id);
     // const url = `/register/${_id}};
     return (
         <div>
