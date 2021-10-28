@@ -5,7 +5,7 @@ const RegisterData = () => {
     console.log(registerData);
 
     useEffect(() => {
-        fetch('http://localhost:5000/registerData')
+        fetch('https://thawing-forest-41291.herokuapp.com/registerData')
         .then(res => res.json())
         .then(data => setRegisterData(data))
     },[])

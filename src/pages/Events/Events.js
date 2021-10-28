@@ -5,7 +5,7 @@ import './Events.css'
 const Events = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/events', {
+        fetch('https://thawing-forest-41291.herokuapp.com/events', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

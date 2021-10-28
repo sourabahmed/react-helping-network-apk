@@ -11,14 +11,14 @@ const Register = () => {
     const { registerId } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleEvent/${registerId}`)
+        fetch(`https://thawing-forest-41291.herokuapp.com/${registerId}`)
             .then(res => res.json())
             .then(data => setEvent(data))
     }, [])
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/register', {
+        fetch('https://thawing-forest-41291.herokuapp.com/register', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

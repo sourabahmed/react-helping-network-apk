@@ -5,7 +5,7 @@ import './AllEvents.css'
 const AllEvents = () => {
     const [events, setEvents] = useState();
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://thawing-forest-41291.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])
